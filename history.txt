@@ -1,0 +1,9 @@
+#parte1
+sudo docker image build . -t miniep6.1:2.5.0-alpine
+sudo docker container run --name miniep6-1-server -p 8000:80 -d miniep6.1:2.5.0-alpine
+
+#parte2
+
+sudo docker image build . -t miniep6.2:2.5.0-alpine
+sudo docker run --name miniep6-2-server -p 8080:80 -v ${PWD}/pages:/usr/src/pages -d miniep6.2:2.5.0-alpine
+
